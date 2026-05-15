@@ -2,7 +2,7 @@ import { Produto } from "../model/Produto";
 
 export class ProdutoRepository {
     private static instance: ProdutoRepository;
-    private produtoLista: Produto [] = [];
+    private produtoLista: Produto[] = [];
 
     private constructor() {}
 
@@ -17,11 +17,20 @@ export class ProdutoRepository {
         this.produtoLista.push(produto);
     }
 
+    // checaId(Produto[]) {
+    //     const produto = produtoLista.find(produto => produto.id === id);
+
+    //     if (!produto) {
+            
+    //     }
+    //     this.produtoLista.push(produto);
+    // }
+
     filtraProdutoPorId(id: number): Produto | undefined {
         return this.produtoLista.find(produto => produto.id === id);
     }
 
-    filtraTodosProdutos(): Produto[]{
+    filtraTodosProdutos(): Produto[] {
         return this.produtoLista;
     }
 }
