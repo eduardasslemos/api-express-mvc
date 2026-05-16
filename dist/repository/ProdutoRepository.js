@@ -17,6 +17,9 @@ class ProdutoRepository {
     filtraProdutoPorId(id) {
         return this.produtoLista.find(produto => produto.id === id);
     }
+    filtraProdutoPorNome(nome) {
+        return this.produtoLista.find(produto => produto.nome === nome);
+    }
     filtraTodosProdutos() {
         return this.produtoLista;
     }

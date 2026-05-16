@@ -13,10 +13,16 @@ export class ProdutoService {
         return novoProduto;
     }
 
-    consultarProduto (id: any): Produto | undefined {
+    consultarProdutoId (id: any): Produto | undefined {
         const idNumber: number = parseInt(id, 10);
         console.log(id);
         return this.produtoRepository.filtraProdutoPorId(idNumber);
+    }
+
+    consultarProdutoNome (nome: any): Produto | undefined {
+        const nomeString = nome.toString();
+        console.log(nome);
+        return this.produtoRepository.filtraProdutoPorNome(nomeString);
     }
 
     getProducts(): Produto[]{

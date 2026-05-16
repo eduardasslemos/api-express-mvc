@@ -14,10 +14,15 @@ class ProdutoService {
         this.produtoRepository.insereProduto(novoProduto);
         return novoProduto;
     }
-    consultarProduto(id) {
+    consultarProdutoId(id) {
         const idNumber = parseInt(id, 10);
         console.log(id);
         return this.produtoRepository.filtraProdutoPorId(idNumber);
+    }
+    consultarProdutoNome(nome) {
+        const nomeString = nome.toString();
+        console.log(nome);
+        return this.produtoRepository.filtraProdutoPorNome(nomeString);
     }
     getProducts() {
         return this.produtoRepository.filtraTodosProdutos();

@@ -12,6 +12,7 @@ function logInfo() {
     console.log(`API em execucao no URL:http:localhost:${PORT}`);
 }
 app.post("/api/produto", ProdutoController_1.cadastrarProduto);
-app.get("/api/produto/:id", ProdutoController_1.pesquisarProdutoPorID);
+app.get("/api/produto/:id", ProdutoController_1.pesquisarProdutoPorId);
+app.get("/api/produto/:nome", ProdutoController_1.pesquisarProdutoPorNome);
 app.get("/api/produtos", ProdutoController_1.listaProdutos);
 app.listen(PORT, logInfo);

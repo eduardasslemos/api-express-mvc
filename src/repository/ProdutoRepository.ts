@@ -17,17 +17,12 @@ export class ProdutoRepository {
         this.produtoLista.push(produto);
     }
 
-    // checaId(Produto[]) {
-    //     const produto = produtoLista.find(produto => produto.id === id);
-
-    //     if (!produto) {
-            
-    //     }
-    //     this.produtoLista.push(produto);
-    // }
-
     filtraProdutoPorId(id: number): Produto | undefined {
         return this.produtoLista.find(produto => produto.id === id);
+    }
+
+    filtraProdutoPorNome(nome: string): Produto | undefined {
+        return this.produtoLista.find(produto => produto.nome === nome);
     }
 
     filtraTodosProdutos(): Produto[] {
